@@ -14,7 +14,7 @@ class Code(Resource):
         print("Request recieved: ")
         code = (json.loads(request.data)[0])['code']
         ts = time.time()
-        fname = "files/"+str(ts)+".py"
+        fname = str(ts)+".py"
         f = open(fname,"w+")
         f.write(code)
         f.close()
